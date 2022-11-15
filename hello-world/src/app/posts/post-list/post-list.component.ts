@@ -12,7 +12,7 @@ styleUrls:['./post-list.component.css']
 
 export class PostlistComponent{
 
- @Input() posts:Post[]=[];
+ @Input() posts:Post[]=[ ];
 constructor(postsService:postsService){}
 }
 
