@@ -1,3 +1,4 @@
+import { postsService } from './posts/post.service';
 import { PostlistComponent } from './posts/post-list/post-list.component';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';

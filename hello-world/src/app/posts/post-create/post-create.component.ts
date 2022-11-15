@@ -1,29 +1,23 @@
-import { Title } from '@angular/platform-browser';
-
- import { Component ,EventEmitter,Output} from "@angular/core";
+import { postsService } from './../post.service';
 import { NgForm } from "@angular/forms";
-import { Post } from "../post.model";
-
+import { Component } from '@angular/core';
 
 @Component({
 selector:'app-post-create',
 templateUrl:'./post-create.component.html',
 styleUrls:['./post-create.component.css']
 })
-
 export class PostCreateComponent{
- entredContent='';
-enteredTitle ='';
-@Output() postCreated = new EventEmitter();
+ entredContent="";
+enteredTitle ="";
+
+constructor(public postsService:postsService){}
+
 
 onAddPost(form: NgForm){
 if(form.invalid){
 return;
 }
-const post:Post={
-  title :form.value.title,
-  content :form.value.content,
-}
-this.postCreated.emit(post);
+this.postsService.addPost(form.value.title,form.value.content)
 }
 }
