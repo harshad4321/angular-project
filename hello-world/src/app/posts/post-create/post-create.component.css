@@ -1,0 +1,13 @@
+/* mat-card{
+width: 80%;
+margin: auto;
+
+} */
+mat-form-field,
+textarea{
+width: 100%;
+}
+button
+{
+background-color: rgb(208, 208, 214);
+}
